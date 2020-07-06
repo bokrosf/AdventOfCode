@@ -7,7 +7,7 @@ namespace AdventOfCode.Year2018
 {
     public static class PathResolver
     {
-        private const string PathPrefix = @"..\..\..\..\AdventOfCode.Year2018\Inputs";
+        private const string PathPrefix = @"..\..\..\..\AdventOfCode.Year2018\Inputs\";
 
         public static string ResolveInputFileNamePath(string fileName) => PathPrefix + fileName;
     }
