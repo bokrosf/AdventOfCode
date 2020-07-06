@@ -29,7 +29,24 @@ namespace AdventOfCode.Year2018.Days
 
         public override void SolveSecondPart()
         {
-            Console.WriteLine("Second part's solution has not been completed.");
+            int frequency = 0;
+            HashSet<int> frequencies = new HashSet<int> { 0 };
+            bool isDuplicateFrequencyFound = false;
+
+            while (!isDuplicateFrequencyFound)
+            {
+                using (StreamReader inputReader = new StreamReader(File.OpenRead(GetInputFilePath())))
+                {
+                    while (!inputReader.EndOfStream && !isDuplicateFrequencyFound)
+                    {
+                        frequency += int.Parse(inputReader.ReadLine());
+                        isDuplicateFrequencyFound = frequencies.Contains(frequency);
+                        frequencies.Add(frequency);
+                    }
+                }
+            }
+            
+            Console.WriteLine($"Second part's solution: {frequency}");
         }
     }
 }
