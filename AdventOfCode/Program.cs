@@ -1,6 +1,5 @@
-﻿using AdventOfCode.Year2018;
+﻿using AdventOfCode.Common;
 using System;
-using System.IO;
 
 namespace AdventOfCode
 {
@@ -8,7 +7,11 @@ namespace AdventOfCode
     {
         public static void Main(string[] args)
         {
+            DayBase day = new Year2018.Days.Day01();
             Console.WriteLine("AdventOfCode");
+            Console.WriteLine();
+            day.SolveFirstPart();
+            day.SolveSecondPart();
         }
     }
 }
