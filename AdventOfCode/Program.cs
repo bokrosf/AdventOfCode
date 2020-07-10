@@ -12,6 +12,7 @@ namespace AdventOfCode
             Console.WriteLine();
             day.SolveFirstPart();
             day.SolveSecondPart();
+            Console.ReadKey();
         }
     }
 }
